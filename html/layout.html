@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+	<meta charset="UTF-8">
+	<title>layout</title>
+	<script type="text/javascript" src="../js/jquery-1.11.2.js"></script>
+	<script type="text/javascript" src="../js/common.js"></script>
+	<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+	<div id="wrap">
+		<div id="header">
+			<h1 class="logo"><a href="#">logo</a></h1>
+			<strong class="mobile_tit">MENU</strong>
+			<a href="#" class="menu_btn on"><span>menu</span></a>
+			<ul class="util fl_clear">
+				<li><a href="#">Login</a></li>
+				<li><a href="#">Join</a></li>
+				<li><a href="#">Contact Us</a></li>
+			</ul>
+			<ul class="gnb fl_clear">
+				<li class="on"><span class="menu_dot"></span><a href="#">ABOUT BRAND</a></li>
+				<li><span class="menu_dot"></span><a href="#">MENU</a></li>
+				<li><span class="menu_dot"></span><a href="#">SHOP</a></li>
+				<li><span class="menu_dot"></span><a href="#">MEMBERSHIP</a></li>
+				<li><span class="menu_dot"></span><a href="#">WHAT'S NEW</a></li>
+			</ul>
+			<div class="top_img"><img src="../img/@tmp_top.jpg" alt="" /></div>
+		</div>
+		<!--// header -->
+		<div id="container" class="fl_clear">
+			<div id="aside">
+				<strong>MENU</strong>
+				<!-- [D] 메뉴 클릭시 class on 활성화 -->
+				<ul class="menu_list">
+					<li class="on"><a href="#m1">COFFEE</a>
+						<ul id="sub1">
+							<li><a href="#" class="on">Speciality Coffee Beans</a></li>
+							<li><a href="#">Espresso</a></li>
+							<li><a href="#">Coffee</a></li>
+						</ul>
+					</li>
+					<li><a href="#2">Sangha Farm</a>
+						<ul id="sub2">
+							<li><a href="#">Speciality Coffee Beans</a></li>
+							<li><a href="#">Espresso</a></li>
+							<li><a href="#">Coffee</a></li>
+						</ul>
+					</li>
+					<li><a href="#3">Smoothie</a>
+						<ul id="sub3">
+							<li><a href="#">Speciality Coffee Beans</a></li>
+							<li><a href="#">Espresso</a></li>
+							<li><a href="#">Coffee</a></li>
+						</ul>
+					</li>
+					<li><a href="#4">Food</a>
+						<ul id="sub4">
+							<li><a href="#">Speciality Coffee Beans</a></li>
+							<li><a href="#">Espresso</a></li>
+							<li><a href="#">Coffee</a></li>
+						</ul>
+					</li>
+				</ul>
+				<!-- mobile 2depth 메뉴 위치이동	-->
+				<div class="sub_menu"></div>
+				<!--// mobile 일때 2depth 메뉴 -->
+			</div>
+			<!--// aside -->
+			<div id="content">
+				<div class="section">
+					<div class="tit_sec">
+						<h2 class="tit">Speciality Coffee Beans</h2>
+						<ul class="locate fl_clear">
+							<li>HOME<span>&gt;</span></li>
+							<li>MENU<span>&gt;</span></li>
+							<li>COFFE<span>&gt;</span></li>
+							<li><strong>Speciality Coffee Beans</strong></li>
+						</ul>
+					</div>
+					
+				</div>
+				<!--// section -->
+			</div>
+			<!--// content -->
+		</div>
+		<div id="footer">
+			<address>엠즈씨드(주)<span class="bar"></span>서울특별시 강남구 도산대로 75길 20<span class="bar"></span>대표번호 1899-8829</address>
+			<span class="copy">&copy; 2015 Paul Bassett. All Rights reserved.</span>
+			<a href="#" class="faceBook">Facebook</a>
+			<ul class="foot_utils fl_clear">
+				<li><a href="#">이용약관</a></li>
+				<li><a href="#">개인정보</a></li>
+				<li><a href="#">신규 입점 안내</a></li>
+				<li><a href="#">사이트맵</a></li>
+			</ul>
+		</div>
+	</div>
+	<!--// wrap -->
+</body>
+</html>
