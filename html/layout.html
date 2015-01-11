@@ -4,7 +4,7 @@
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
 	<meta charset="UTF-8">
 	<title>layout</title>
-	<script type="text/javascript" src="../js/jquery-1.11.2.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 	<script type="text/javascript" src="../js/common.js"></script>
 	<link rel="stylesheet" href="../css/style.css">
 </head>
@@ -12,12 +12,12 @@
 	<div id="wrap">
 		<div id="header">
 			<h1 class="logo"><a href="#">logo</a></h1>
-			<strong class="mobile_tit">MENU</strong>
-			<a href="#" class="menu_btn on"><span>menu</span></a>
+			<!-- 모바일에서 메뉴 버튼 -->
+			<a href="#" class="menu_btn"><span>menu</span></a>
 			<ul class="util fl_clear">
-				<li><a href="#">Login</a></li>
-				<li><a href="#">Join</a></li>
-				<li><a href="#">Contact Us</a></li>
+				<li class="login"><a href="#">Login</a></li>
+				<li class="join"><a href="#">Join</a></li>
+				<li class="contact"><a href="#">Contact Us</a></li>
 			</ul>
 			<ul class="gnb fl_clear">
 				<li class="on"><span class="menu_dot"></span><a href="#">ABOUT BRAND</a></li>
@@ -31,32 +31,32 @@
 		<!--// header -->
 		<div id="container" class="fl_clear">
 			<div id="aside">
-				<strong>MENU</strong>
+				<strong class="lnb_tit">MENU</strong>
 				<!-- [D] 메뉴 클릭시 class on 활성화 -->
 				<ul class="menu_list">
 					<li class="on"><a href="#m1">COFFEE</a>
-						<ul id="sub1">
+						<ul id="m1">
 							<li><a href="#" class="on">Speciality Coffee Beans</a></li>
 							<li><a href="#">Espresso</a></li>
 							<li><a href="#">Coffee</a></li>
 						</ul>
 					</li>
-					<li><a href="#2">Sangha Farm</a>
-						<ul id="sub2">
+					<li><a href="#m2">Sangha Farm</a>
+						<ul id="m2">
 							<li><a href="#">Speciality Coffee Beans</a></li>
 							<li><a href="#">Espresso</a></li>
 							<li><a href="#">Coffee</a></li>
 						</ul>
 					</li>
-					<li><a href="#3">Smoothie</a>
-						<ul id="sub3">
+					<li><a href="#m3">Smoothie</a>
+						<ul id="m3">
 							<li><a href="#">Speciality Coffee Beans</a></li>
 							<li><a href="#">Espresso</a></li>
 							<li><a href="#">Coffee</a></li>
 						</ul>
 					</li>
-					<li><a href="#4">Food</a>
-						<ul id="sub4">
+					<li><a href="#m4">Food</a>
+						<ul id="m4">
 							<li><a href="#">Speciality Coffee Beans</a></li>
 							<li><a href="#">Espresso</a></li>
 							<li><a href="#">Coffee</a></li>
@@ -90,10 +90,10 @@
 			<span class="copy">&copy; 2015 Paul Bassett. All Rights reserved.</span>
 			<a href="#" class="faceBook">Facebook</a>
 			<ul class="foot_utils fl_clear">
-				<li><a href="#">이용약관</a></li>
+				<li class="provision"><a href="#">이용약관</a></li>
 				<li><a href="#">개인정보</a></li>
-				<li><a href="#">신규 입점 안내</a></li>
-				<li><a href="#">사이트맵</a></li>
+				<li class="newstore"><a href="#">신규 입점 안내</a></li>
+				<li class="sitemap"><a href="#">사이트맵</a></li>
 			</ul>
 		</div>
 	</div>
