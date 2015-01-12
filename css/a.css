@@ -1,2 +1,147 @@
 @charset"utf-8";
 
+@import url("http://fonts.googleapis.com/earlyaccess/nanumgothic.css");
+
+
+@font-face {
+
+    font-family:glypha-bold;
+
+    src: url('/img/glypha-bold.eot');
+
+    src: url('/img/glypha-bold.eot?#iefix') format('embedded-opentype'),
+
+         url('/img/glypha-bold.woff') format('woff'),
+
+         url('/img/glypha-boldc.ttf') format('truetype');
+
+    font-weight: normal;
+
+    font-style: normal; 
+
+}
+
+@font-face {
+
+    font-family:helveticaneueltpromd;
+
+    src: url('/img/helveticaneueltpromd.eot');
+
+    src: url('/img/helveticaneueltpromd.eot?#iefix') format('embedded-opentype'),
+
+         url('/img/helveticaneueltpromd.woff') format('woff'),
+
+         url('/img/helveticaneueltpromd.ttf') format('truetype');
+
+    font-weight: normal;
+
+    font-style: normal; 
+
+}
+@font-face {
+
+    font-family:helveticaneueltpro-roman-webfont;
+
+    src: url('/img/helveticaneueltpro-roman-webfont.eot');
+
+    src: url('/img/helveticaneueltpro-roman-webfont.eot?#iefix') format('embedded-opentype'),
+
+         url('/img/helveticaneueltpro-roman-webfont.woff') format('woff'),
+
+         url('/img/helveticaneueltpro-roman-webfont.ttf') format('truetype');
+
+    font-weight: normal;
+
+    font-style: normal; 
+
+}
+
+*{font-family: 'Nanum Gothic', serif;}
+
+
+
+
+
+  a{text-decoration:none;}
+  caption{display:none;}
+  table tr th{font-weight:normal;}
+
+  /* 버튼 guide*/
+  .btnGuide{width:100%;text-align:left;}
+  .btn_purple{display:inline-block;width:62px;height:35px;line-height:35px;text-align:center;color:#fff;background-color:#c4004a;}
+  .btn_purple_1{display:inline-block;width:84px;height:35px;line-height:35px;text-align:center;color:#fff;background-color:#c4004a;}
+
+  .btn_gray{display:inline-block;width:125px;height:35px;line-height:35px;text-align:center;color:#fff;background-color:#757374;}
+  .btn_gray_1{display:inline-block;width:62px;height:35px;line-height:35px;text-align:center;color:#fff;background-color:#757374;}
+  .btn_gray_2{display:inline-block;width:65px;height:28px;line-height:28px;text-align:center;color:#fff;background-color:#757374;}
+  .btn_gray_3{display:inline-block;width:90px;height:25px;line-height:25px;text-align:center;color:#fff;background-color:#757374;}
+
+  .btn_white{display:inline-block;width:88px;height:23px;border:1px solid #cccccc;line-height:23px;text-align:center;color:#757575;background-color:#fff; }
+  
+  .btnTitle{font-size:15px;}
+
+
+
+
+
+  /* 테이블 guide */
+ 
+.tableDisplay {display:table;width:100%;}
+.tableRow{display:table-row;}
+.tableDisplay li{display:table-cell; font-size:12px; border-bottom:1px solid #dddddd;padding:15px 0 15px 0;text-align:center;} /*font size는 임의 조절 */
+.tableDisplay ul:first-child{background-color:#f7f7f7;}
+.tableDisplay ul:first-child li{border-top:1px solid #b4b4b4; font-family:'glypha-bold';text-align:center;}
+
+ table{border-spacing:0; border-collapse:collapse; width:100%;}
+.tableWrap{width:100%}
+.tableWrap .table_1 tr th, 
+.tableWrap .table_1 tr td{border-bottom:1px solid #dddddd;height:48px;font-size:12px;}
+
+.tableWrap .table_1 tr:first-child th, 
+.tableWrap .table_1 tr:first-child td{border-top:1px solid #b4b4b4;}
+.txtCenter_Vnone{text-align:center; border-bottom:none !important;}
+.txtCenter{text-align:center !important;}
+.txtLeft{text-align:left !important;}
+
+
+.tableWrap .table_2 thead tr th{background-color:#f7f7f7;}
+.tableWrap .table_2 tr th, 
+.tableWrap .table_2 tr td{border-bottom:1px solid #dddddd;height:38px;text-align:center;padding:12px 0 12px 0;font-size:12px;font-weight:bold;color:#4c4c4c;}
+.tableWrap .table_2 tr:first-child th, 
+.tableWrap .table_2 tr:first-child td{border-top:1px solid #b4b4b4;}
+.pagination a{font-weight:normal !important; color:#757575;padding:0 5px 0 5px;}
+.pagination a.current{color:#c40147;font-weight:bold !important;}
+
+
+  /* font size guide*/
+  .f_12 {font-size:12px;}
+  .f_20 {font-size:20px;}
+  .f_23 {font-size:23px;}
+  .f_25 {font-size:25px;}
+
+  /* font-color*/
+.fontColor_1{color:#c40048;}
+
+  /* web font[ENG] */
+  .webFontE_1{font-family:'glypha-bold';}
+  .webFontE_2{font-family:'helveticaneueltpromd';}
+  .webFontE_3{font-family:'helveticaneueltpro-roman-webfont';}
+
+	#mHead{display:none;border:1px solid #b4b4b4;}
+
+@media all and (max-width:480px){
+	#removeHead{display:none;}
+	#mHead{display:table-Row;}
+	.tableDisplay ul li:last-child{display:none;}
+
+	
+
+}
+
+
+
+
+
+
+
+  
