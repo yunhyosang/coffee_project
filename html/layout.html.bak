@@ -1,3 +1,4 @@
+<!-- test -->
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -11,11 +12,9 @@
 <body>
 	<div id="wrap">
 		<div id="header">
-			<h1 class="logo"><a href="#"><img src="../img/m/mLogo.png" alt="" /></a></h1>
+			<h1 class="logo"><a href="#">logo</a></h1>
 			<!-- 모바일에서 메뉴 버튼 -->
-			<a href="#" class="menu_btn">
-				<!-- <img src="../img/m/mMenuBtn.png" style="width:50%" alt="" /> -->
-			</a>
+			<a href="#" class="menu_btn"><span>menu</span></a>
 			<ul class="util fl_clear">
 				<li class="login"><a href="#">Login</a></li>
 				<li class="join"><a href="#">Join</a></li>
@@ -38,33 +37,36 @@
 				<ul class="menu_list">
 					<li class="on"><a href="#m1">COFFEE</a>
 						<ul id="m1">
-							<li><span class="menu_dot"></span><a href="#" class="on">Speciality Coffee Beans</a></li>
-							<li><span class="menu_dot"></span><a href="#">Espresso</a></li>
-							<li><span class="menu_dot"></span><a href="#">Coffee</a></li>
+							<li><a href="#" class="on">Speciality Coffee Beans</a></li>
+							<li><a href="#">Espresso</a></li>
+							<li><a href="#">Coffee</a></li>
 						</ul>
 					</li>
 					<li><a href="#m2">Sangha Farm</a>
 						<ul id="m2">
-							<li><span class="menu_dot"></span><a href="#">Speciality Coffee Beans</a></li>
-							<li><span class="menu_dot"></span><a href="#">Espresso</a></li>
-							<li><span class="menu_dot"></span><a href="#">Coffee</a></li>
+							<li><a href="#">Speciality Coffee Beans</a></li>
+							<li><a href="#">Espresso</a></li>
+							<li><a href="#">Coffee</a></li>
 						</ul>
 					</li>
 					<li><a href="#m3">Smoothie</a>
 						<ul id="m3">
-							<li><span class="menu_dot"></span><a href="#">Speciality Coffee Beans</a></li>
-							<li><span class="menu_dot"></span><a href="#">Espresso</a></li>
-							<li><span class="menu_dot"></span><a href="#">Coffee</a></li>
+							<li><a href="#">Speciality Coffee Beans</a></li>
+							<li><a href="#">Espresso</a></li>
+							<li><a href="#">Coffee</a></li>
 						</ul>
 					</li>
 					<li><a href="#m4">Food</a>
 						<ul id="m4">
-							<li><span class="menu_dot"></span><a href="#">Speciality Coffee Beans</a></li>
-							<li><span class="menu_dot"></span><a href="#">Espresso</a></li>
-							<li><span class="menu_dot"></span><a href="#">Coffee</a></li>
+							<li><a href="#">Speciality Coffee Beans</a></li>
+							<li><a href="#">Espresso</a></li>
+							<li><a href="#">Coffee</a></li>
 						</ul>
 					</li>
 				</ul>
+				<!-- mobile 2depth 메뉴 위치이동	-->
+				<div class="sub_menu"></div>
+				<!--// mobile 일때 2depth 메뉴 -->
 			</div>
 			<!--// aside -->
 			<div id="content">
@@ -85,9 +87,9 @@
 			<!--// content -->
 		</div>
 		<div id="footer">
-			<address>엠즈씨드(주)<span class="bar"></span>서울특별시 강남구 도산대로 75길 20<span class="bar"></span><span class="office_call">대표번호 1899-8829</span></address>
+			<address>엠즈씨드(주)<span class="bar"></span>서울특별시 강남구 도산대로 75길 20<span class="bar"></span>대표번호 1899-8829</address>
 			<span class="copy">&copy; 2015 Paul Bassett. All Rights reserved.</span>
-			<a href="#" class="faceBook"><img src="../img/pc/fbLogo.png" alt="facebook" /></a>
+			<a href="#" class="faceBook">Facebook</a>
 			<ul class="foot_utils fl_clear">
 				<li class="provision"><a href="#">이용약관</a></li>
 				<li><a href="#">개인정보</a></li>
