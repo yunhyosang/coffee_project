@@ -24,7 +24,14 @@ $(document).ready(function(){
 	lnb_1dp.click(function(){
 		$(".menu_list>li").removeClass("on");
 		$(this).addClass('on');
-
+		var winW = $(window).width(); 
+		if(940>winW){
+			var manuTarget = $(this).find('a').attr("href");
+			console.log(manuTarget)
+			$(".sub_menu").show();
+			$(".sub_menu ul").hide();
+			$(".sub_menu ul"+manuTarget).show();
+		}
 	});
 
 	/* 모바일 메뉴아이콘 클릭 */
@@ -68,14 +75,12 @@ $(document).ready(function(){
 		var winW = $(window).width(); 
 
 		if(940>winW){
-			$('#aside').css('display','none');
-			$('.section').css('display','none');
 			login_join.insertBefore('.provision');
 			foot_utils.insertBefore('address');
 			$("#footer span:nth-child(2)").css({"display":"none"});	
+			$(".sub_menu").hide();
+			$(".sub_menu ul").hide();
 		}else{
-			$('#aside').css('display','inline-block');
-			$('.section').css('display','block');
 			login_join.insertBefore('.util .contact');
 			$("#footer span:nth-child(2)").css({"display":"inline-block"});
 		}
@@ -92,11 +97,11 @@ $(document).ready(function(){
 //				, menu_list_1dp = $(".menu_list>li.on")
 //				, depth2 = $(".menu_list>li ul")
 //				, cloneD2 = $(".menu_list>li ul").clone();
-//				
 //				menu_list.after("<div class='sub_menu'></div>");
 //				depth2.hide();
 //				$('.sub_menu').append(cloneD2)
 //		}else{
 //			$(".menu_list>li.on>ul").show()
+//			$('div').remove(".sub_menu")
 //		}
 //	}
