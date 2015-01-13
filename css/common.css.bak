@@ -27,9 +27,9 @@ body{font-family:나눔고딕, NanumGothic, ng}
 .txt_cent{text-align:center;}
 .pos_r{position:relative;}
 .pos_a{position:absolute;}
-.dimmed{position:absolute;top:0;left:0;bottom:0;width:100%;background:#000;opacity:0.5;}
+.dimmed{position:fixed;top:0;left:0;bottom:0;width:100%;background:#000;opacity:0.5;}
 /* layout */
-#wrap{position:relative;}
+#wrap{position:relative}
 #header,#container,#footer{width:90%;margin:0 auto}
 #header{position:relative;margin:10px auto 29px;border-top:solid #4d4c4c 1px;}
 #container{padding:0 0 70px;}
@@ -71,22 +71,14 @@ address{font-style:normal;margin-bottom:8px;}
 .tit_sec .locate li{float:left;margin-left:7px;}
 .tit_sec .locate li span{margin-left:6px;}
 
-@media all and (min-width:940px){
-#wrap{width:940px;margin:0 auto;}
-
-}
-
-
 @media all and (max-width:940px){
-#footer, address{text-align:center;}
 #header{margin:0;border-top:0}
 #header,#container,#footer{width:auto}
-.logo{position:absolute;top:-5px;left:10px;padding:0;overflow:hidden;}
-.logo img{width:59px;}
+.logo{position:absolute;top:8px;left:10px;width:60px;height:25px;padding:0;overflow:hidden;}
 .top_img,.faceBook,.newstore,.sitemap,.util{display:none;}
 .mobile_tit{display:block;font-size:20px;font-weight:bold;text-align:center;line-height:43px;border-bottom:solid #c4004a 1px;}
-.menu_btn{display:block;width:43px;height:43px;position:absolute;top:0;right:0;background:url(../img/m/mMenuBtn.png)no-repeat;background-size:43px;}
-.menu_btn.on{background:url(../img/m/mMenuOverBtn.png) no-repeat;background-size:43px;}
+.menu_btn{display:block;position:absolute;top:0;right:0;padding:15px 10px}
+.menu_btn.on{background:#c4004a;}
 .menu_btn span{display:block;width:22px;height:14px;overflow:hidden;}
 .gnb{display:none;border-top:none;}
 .gnb li{float:none;width:100%;position:relative;}
@@ -96,15 +88,5 @@ address{font-style:normal;margin-bottom:8px;}
 .tit_sec .locate{display:none;}
 #aside,#content{float:none;width:100%}
 .menu_list{border-top:none;}
-.sub_menu{display:block;}
-.foot_utils{position:relative;top:0;left:0;width:230px;margin:0 auto 14px;font-size:12px;}
-.foot_utils li{margin-left:30px;}
-.foot_utils li:first-child{margin-left:0;}
-.foot_utils:after{display:block;content:"";clear:both;}
-address{margin-bottom:0;}
-address,.copy{text-align:center;}
-.copy{display:block;}
-.office_call{display:none;}
-.copy:before{content:"대표번호 1899-8829 "}
-.sub_menu{background:#f7f7f7;}
+.sub_menu{display:block}
 }
