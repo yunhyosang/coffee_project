@@ -6,7 +6,52 @@
 	<title>layout</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 	<script type="text/javascript" src="../js/common.js"></script>
-	<link rel="stylesheet" href="../css/style.css" type="text/css" />
+	<script type="text/javascript" src="../js/idangerous.swiper-2.1.min.js"></script>
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/subCommon.css">
+	<link rel="stylesheet" href="../css/idangerous.swiper.css">
+	<script type="text/javascript">
+			/*======
+			Use document ready or window load events
+			For example:
+			With jQuery: $(function() { ...code here... })
+			Or window.onload = function() { ...code here ...}
+			Or document.addEventListener('DOMContentLoaded', function(){ ...code here... }, false)
+			=======*/
+
+			window.onload = function() {
+			  var mySwiper = new Swiper('.swiper-container',{
+				//Your options here:
+				mode:'horizontal',
+				loop: true,
+				autoplay:true,
+				speed:3000,
+				pagination : '.pagination'
+			
+				//etc..
+			  });  
+
+				swipeWrapHeight();
+
+			}
+	
+			$(window).resize(function(){
+					swipeWrapHeight();
+			});
+			
+
+$(function(){
+			  console.log($('.mainImg').height())
+})
+
+function swipeWrapHeight(){
+var sHeight = $('.mainImg').height();
+$('.swiper-container').css('height',sHeight);
+}
+
+
+
+			</script>
 </head>
 <body>
 	<div id="wrap">
@@ -21,50 +66,27 @@
 				<li class="join"><a href="#">Join</a></li>
 				<li class="contact"><a href="#">Contact Us</a></li>
 			</ul>
+			<!-- pc 버전에서 활성화 되는 GNB -->
 			<ul class="gnb fl_clear">
 				<li class="on"><span class="menu_dot"></span><a href="#">ABOUT BRAND</a></li>
-				<li><span class="menu_dot"></span><a href="#">MENU</a></li>
+				<li><span class="menu_dot"></span>	<a href="#">MENU</a></li>
 				<li><span class="menu_dot"></span><a href="#">SHOP</a></li>
 				<li><span class="menu_dot"></span><a href="#">MEMBERSHIP</a></li>
 				<li><span class="menu_dot"></span><a href="#">WHAT'S NEW</a></li>
 			</ul>
-			<div class="top_img"><img src="../img/@tmp_top.jpg" alt="" /></div>
+			<!-- 모바일 버전에서 활성화 되는 GNB -->
+			<ul class="mobileGnb fl_clear">
+				<li class="on"><a href="#">MEMBERSHIP</a></li>
+				<li><a href="#">MENU</a></li>
+				<li><a href="#">SHOP</a></li>
+			</ul>
 		</div>
 		<!--// header -->
 		<div id="container" class="fl_clear">
 			<div id="aside">
-				<strong class="lnb_tit">MENU</strong>
+				<strong class="lnb_tit"> &nbsp;</strong>
 				<!-- [D] 메뉴 클릭시 class on 활성화 -->
-				<ul class="menu_list">
-					<li class="on"><a href="#m1">COFFEE</a>
-						<ul id="m1">
-							<li><span class="menu_dot"></span><a href="#" class="on">Speciality Coffee Beans</a></li>
-							<li><span class="menu_dot"></span><a href="#">Espresso</a></li>
-							<li><span class="menu_dot"></span><a href="#">Coffee</a></li>
-						</ul>
-					</li>
-					<li><a href="#m2">Sangha Farm</a>
-						<ul id="m2">
-							<li><span class="menu_dot"></span><a href="#">Speciality Coffee Beans</a></li>
-							<li><span class="menu_dot"></span><a href="#">Espresso</a></li>
-							<li><span class="menu_dot"></span><a href="#">Coffee</a></li>
-						</ul>
-					</li>
-					<li><a href="#m3">Smoothie</a>
-						<ul id="m3">
-							<li><span class="menu_dot"></span><a href="#">Speciality Coffee Beans</a></li>
-							<li><span class="menu_dot"></span><a href="#">Espresso</a></li>
-							<li><span class="menu_dot"></span><a href="#">Coffee</a></li>
-						</ul>
-					</li>
-					<li><a href="#m4">Food</a>
-						<ul id="m4">
-							<li><span class="menu_dot"></span><a href="#">Speciality Coffee Beans</a></li>
-							<li><span class="menu_dot"></span><a href="#">Espresso</a></li>
-							<li><span class="menu_dot"></span><a href="#">Coffee</a></li>
-						</ul>
-					</li>
-				</ul>
+				
 				<!-- [D] 모바일일떄 메뉴 노출 -->
 				<div class='sub_menu'>
 						<ul id="m1">
@@ -92,19 +114,32 @@
 			</div>
 			<!--// aside -->
 			<div id="content">
-				<div class="section">
-					<div class="tit_sec">
-						<h2 class="tit">Speciality Coffee Beans</h2>
-						<ul class="locate fl_clear">
-							<li>HOME<span>&gt;</span></li>
-							<li>MENU<span>&gt;</span></li>
-							<li>COFFE<span>&gt;</span></li>
-							<li><strong>Speciality Coffee Beans</strong></li>
-						</ul>
-					</div>
-					
-				</div>
-				<!--// section -->
+					<!-- swiper-container -->
+					<div class="swiper-container">
+						  <div class="swiper-wrapper">
+							  <!--First Slide-->
+							  <div class="swiper-slide"> 
+								<!-- Any HTML content of the first slide goes here -->
+								<img src="../img/pc/mainImg1.png" class="mainImg" alt="" />
+							  </div>
+							  
+							  <!--Second Slide-->
+							  <div class="swiper-slide">
+								<!-- Any HTML content of the second slide goes here -->
+								<img src="../img/pc/mainImg2.png" class="mainImg" alt="" />
+							  </div>
+							  
+							  <!--Third Slide-->
+							  <div class="swiper-slide"> 
+								<!-- Any HTML content of the third slide goes here -->
+								<img src="../img/pc/mainImg3.png" class="mainImg" alt="" />
+							  </div>
+							  <!--Etc..-->
+						  </div>
+						 <div class="pagination"></div>
+						</div>
+				<!-- //swiper-container -->
+
 			</div>
 			<!--// content -->
 		</div>
