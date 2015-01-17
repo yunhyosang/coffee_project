@@ -20,13 +20,14 @@ Basic Swiper Styles
 /* Specify Swiper's Size: */
 .swiper-container, .swiper-slide {
   width: 100%;
+
 }
 
 
 .swiper-container {
 	margin:0 auto;
 	position:relative;
-	overflow:hidden;
+	overflow:hidden; 
 	-webkit-backface-visibility:hidden;
 	-moz-backface-visibility:hidden;
 	-ms-backface-visibility:hidden;
@@ -111,15 +112,32 @@ sizes, pagination, etc.
 /* ===============================================================
 Pagination Styles
 ================================================================*/
+.pagination {
+	text-align: right;
+	padding: 5px 0;
+	text-align:center;
+}
+
 .swiper-pagination-switch {
-	/* Stylize pagination button: */	
+	display: inline-block;
+	width: 8px;
+	height: 8px;
+	border-radius: 8px;
+	margin: 0 4px;
+	background-color: #4c4c4d;
+	border: 0px solid #188A77;
+	cursor: pointer;
+	transition: all .25s linear;
 
 }
 .swiper-active-switch {
-	/* Specific active button style: */	
+	background-color: #ec6d79;
 	
 }
 .swiper-visible-switch {
 	/* Specific visible button style: */	
-	
 }
+
+
+ 
+

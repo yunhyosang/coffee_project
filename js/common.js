@@ -1,3 +1,9 @@
+/*
+	주석 s (시작), e(구문 끝)
+
+*/
+
+
 $(document).ready(function(){
 	
 	lnbTitle();
@@ -42,7 +48,7 @@ $(document).ready(function(){
 	menu_btn.click(function(){
 			var headerH = $("#header").height()
 			, gnbH = gnb.height()
-			,dimmedTop = headerH+gnbH;
+			,dimmedTop = headerH+gnbH-50;
 			$(this).toggleClass('on');
 
 		if($(this).hasClass('on')){
@@ -51,41 +57,56 @@ $(document).ready(function(){
 			dimmed.show();
 			dimmed.css({"top":dimmedTop});
 		}else{
-			gnb.slideUp();
-			dimmed.hide();
+			gnb.slideUp(function(){dimmed.hide();});
+			
 		}
 	});
 
 
 	function lnbTitle(){
 				// 940보다 작아지면 lnb 메뉴 타이틀 헤더 센터로 
+				
 		var winW = $(window).width(); 
 		var  lnbTitle = $(".lnb_tit"); // lnb 메뉴 타이틀
 			if((winW<940) && ($("#container").has("#aside"))){
 					lnbTitle.insertAfter(".logo").addClass("mobile_tit");
 			}else if((winW>940) && ($("#container").has("#aside"))){
 					lnbTitle.insertBefore(".menu_list").removeClass("mobile_tit");
+
+					// s 익스플로러 7,8 check
+					if (!$.support.leadingWhitespace) {
+						//IE7 and 8 stuff
+							$("#wrap").css({'width':'940px','margin' : '0 auto'});
+							$(".mobileContents").css('display','none');
+							$("#container").css('margin-top','-50px');
+							$('.pcVer').css('display','none');
+						}
+  				 // e 익스플로러 7,8 check
 			}
 	}
 
 	function moveElm(){
-		// 상단 로그인, 가입, lnb 의 2depth 위치이동 및 푸터 내 컨텐츠 위치변경
-		var login_join = $(".login, .join")
-			, foot_utils = $(".foot_utils");
-		var winW = $(window).width(); 
 
-		if(940>winW){
-			login_join.insertBefore('.provision');
-			foot_utils.insertBefore('address');
-			$("#footer span:nth-child(2)").css({"display":"none"});	
-			$(".sub_menu").hide();
-			$(".sub_menu ul").hide();
-		}else{
-			login_join.insertBefore('.util .contact');
-			$("#footer span:nth-child(2)").css({"display":"inline-block"});
+//IE8 버전에서는 동작 안함
+	if($.support.leadingWhitespace) {
+						// 상단 로그인, 가입, lnb 의 2depth 위치이동 및 푸터 내 컨텐츠 위치변경
+					var login_join = $(".login, .join")
+						, foot_utils = $(".foot_utils");
+					var winW = $(window).width(); 
+
+					if(940>winW){
+						login_join.insertBefore('.provision');
+						foot_utils.insertBefore('address');
+						$("#footer span:nth-child(2)").css({"display":"none"});	
+						$(".sub_menu").hide();
+						$(".sub_menu ul").hide();
+					}else{
+						login_join.insertBefore('.util .contact');
+						$("#footer span:nth-child(2)").css({"display":"inline-block"});
+						$(".dimmed").css("display","none");
+					}
+				}
 		}
-		
-	}
 });
 
 
@@ -105,3 +126,21 @@ $(document).ready(function(){
 //			$('div').remove(".sub_menu")
 //		}
 //	}
+
+
+/*		회원가입에서 사용되어지는 스크립트  */
+function joinPageFunc(){
+	//IE8 버전에서는 동작 안함
+	if($.support.leadingWhitespace) {
+		var winW = $(window).width();
+		
+		if(940>winW){
+			
+		}
+		else{
+		
+		}
+	
+	}
+
+}

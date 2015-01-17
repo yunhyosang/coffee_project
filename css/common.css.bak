@@ -3,7 +3,7 @@
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,form,fieldset,p,blockquote,button,th,td,textarea,input{margin:0;padding:0;-webkit-text-size-adjust: none;}
 hr, legend {display:none;}
 img, fieldset {border:0 none;}
-body, h1, h2, h3, h4, h5, dl, dt, dd, th, td, p, form, fieldset, legend, input, div{font-family:"Malgun Gothic",'맑은 고딕', Dotum;letter-spacing:-1px}
+body, h1, h2, h3, h4, h5, dl, dt, dd, th, td, p, form, fieldset, legend, input, div{font-family:'Nanum Gothic",'나눔 고딕', Dotum;letter-spacing:-1px}
 ul, ol, li {list-style:none outside;}
 img, input, select, textarea, label{vertical-align:middle;}
 a{color:#4d4c4c}
@@ -27,18 +27,24 @@ body{font-family:나눔고딕, NanumGothic, ng}
 .txt_cent{text-align:center;}
 .pos_r{position:relative;}
 .pos_a{position:absolute;}
-.dimmed{position:fixed;top:0;left:0;bottom:0;width:100%;background:#000;opacity:0.5;}
+.dimmed{position:absolute;top:0;left:0;bottom:0;width:100%;background:#000;opacity:0.5;}
 /* layout */
-#wrap{position:relative}
+#wrap{position:relative;min-width:280px;}
 #header,#container,#footer{width:90%;margin:0 auto}
 #header{position:relative;margin:10px auto 29px;border-top:solid #4d4c4c 1px;}
-#container{padding:0 0 70px;}
+/*  #container{padding:0 0 70px;} */
 #aside{width:15%;float:left;font-size:12px;}
 #content{width:80%;float:right}
 .logo{width:122px;height:51px;margin:0 auto;padding:9px 0;}
-.gnb{border-top:solid #c4004a 1px;width:100%}
+.gnb{border-top:solid #c4004a 1px;width:100%;position:absolute;background:#ffffff;z-index:999;}
 .gnb li{float:left;width:20%}
-.gnb li a{display:block;color:#333;font-size:12px;font-weight:bold;text-align:center;padding:15px 0}
+.gnb li a{display:block;color:#333;font-size:12px;font-weight:bold;text-align:center;padding:15px 0;font-family:'helveticaneueltpromd';}
+
+.mobileGnb{width:100%;}
+.mobileGnb li{float:left;width:33%}
+.mobileGnb li a{display:block;color:#333;font-size:15px;font-weight:bold;text-align:center;padding:15px 0;font-family:'helveticaneueltpromd';}
+
+
 .util{position:absolute;top:11px;right:0;font-size:11px;}
 .util li{float:left;margin-left:16px;}
 .util li:first-child{margin-left:none;}
@@ -54,14 +60,14 @@ address{font-style:normal;margin-bottom:8px;}
 .mobile_tit,.menu_btn{display:none;}
 
 /* lnb */
-#aside>strong{display:block;font-size:14px;color:#333;padding-bottom:15px;}
+#aside>strong{display:block;font-size:14px;color:#333; /* padding-bottom:15px; */}
 .menu_list{font-size:12px;border-top:solid #757474 1px;}
 .menu_list li a{display:block;font-weight:bold;color:#333;margin-top:17px;}
 .menu_list li:first-child a{margin-top:15px;}
 .menu_list li ul{display:none;margin:8px 0 13px;}
 .menu_list li.on ul{display:block;}
 .menu_list li li a{color:#757474;margin:12px 0 0;padding:0 10px;}
-.menu_list li.on li a.on{color:#c4004a;}
+.menu_list li.on li a.on,.menu_list li li a:active{color:#c4004a;}
 .sub_menu{display:none;}
 
 /* sub title */
@@ -71,22 +77,65 @@ address{font-style:normal;margin-bottom:8px;}
 .tit_sec .locate li{float:left;margin-left:7px;}
 .tit_sec .locate li span{margin-left:6px;}
 
+@media all and (min-width:940px){
+#wrap{width:940px;margin:0 auto;}
+.mobileGnb{display:none;}
+.mobileContents{display:none;}
+}
+
+
 @media all and (max-width:940px){
+/* 모바일 css */
+.pagination{display:none;}  /* 메인 이미지 페이징 숨김 [모바일] */
+.pcContents{ display:none;} /* 2015-01-15 */
+.mobileContents{display:inline-block;;}
+#footer, address{text-align:center;}
 #header{margin:0;border-top:0}
 #header,#container,#footer{width:auto}
-.logo{position:absolute;top:8px;left:10px;width:60px;height:25px;padding:0;overflow:hidden;}
+.logo{position:absolute;top:-5px;left:10px;padding:0;overflow:hidden;}
+.logo img{width:59px;}
 .top_img,.faceBook,.newstore,.sitemap,.util{display:none;}
 .mobile_tit{display:block;font-size:20px;font-weight:bold;text-align:center;line-height:43px;border-bottom:solid #c4004a 1px;}
-.menu_btn{display:block;position:absolute;top:0;right:0;padding:15px 10px}
-.menu_btn.on{background:#c4004a;}
+.menu_btn{display:block;width:43px;height:43px;position:absolute;top:0;right:0;background:url(../img/m/mMenuBtn.png)no-repeat;background-size:43px;}
+.menu_btn.on{background:url(../img/m/mMenuOverBtn.png) no-repeat;background-size:43px;}
 .menu_btn span{display:block;width:22px;height:14px;overflow:hidden;}
 .gnb{display:none;border-top:none;}
 .gnb li{float:none;width:100%;position:relative;}
 .gnb li a{display:block;text-align:left;padding:10px 22px;}
-.gnb li.on a{color:#c4004a;}
-.menu_dot{position:absolute;top:17px;left:10px;width:2px;height:2px;background:#c4004a;}
+.gnb li.on a,.gnb li a:active{color:#c4004a;}
+.menu_dot{position:absolute;top:16px;left:10px;width:2px;height:2px;background:#c4004a;}
+
 .tit_sec .locate{display:none;}
-#aside,#content{float:none;width:100%}
-.menu_list{border-top:none;}
-.sub_menu{display:block}
+#aside,#content{float:none;width:100%;}
+
+.menu_list:after{display:block;content:"";clear:both;}
+.menu_list{border-top:none;padding:0 10px 8px;}
+.menu_list li ul,.menu_list li.on ul{display:none;}
+.menu_list li{float:left;margin-right:26px;text-align:left}
+.menu_list li:first-child{}
+.menu_list li a{display:block;font-size:15px;padding:14px 0 7px;margin:0;}
+.menu_list li a:first-child{margin:0;}
+.sub_menu{display:block;border-top:solid 1px #757474;padding-bottom:11px}
+.sub_menu ul li{display:inline;margin-right:25px;position:relative;}
+.sub_menu ul li:first-child{}
+.sub_menu ul li a{display:inline-block;padding:14px 0 4px 20px}
+.sub_menu ul li a.on,.sub_menu ul li a:active{color:#c4004a;}
+.sub_menu ul li a.on:after{background:#c4004a;position:absolute;}
+.sub_menu ul li a:after{content:"";display:block;width:2px;height:2px;background:#757474;position:absolute;top:7px;left:10px;}
+.foot_utils{position:relative;top:0;left:0;width:230px;margin:0 auto 14px;font-size:12px;}
+.foot_utils li{margin-left:30px;}
+.foot_utils li:first-child{margin-left:0;}
+.foot_utils:after{display:block;content:"";clear:both;}
+address{margin-bottom:0;}
+address,.copy{text-align:center;}
+.copy{display:block;}
+.office_call{display:none;}
+.copy:before{content:"대표번호 1899-8829 "}
+.sub_menu{background:#f7f7f7;}
 }
+
+
+
+
+
+

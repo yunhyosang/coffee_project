@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-	<meta name="viewport" content="initial-scale=1, maximum-scale=1"> 
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
 	<meta charset="UTF-8">
 	<title>layout</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
@@ -25,33 +25,31 @@
 				mode:'horizontal',
 				loop: true,
 				autoplay:true,
-				speed:1000,
+				speed:3000,
 				pagination : '.pagination',
 				loop:true,
-				autoplay:2000,
+				autoplay:3000,
 				paginationClickable:true
+			
+				//etc..
 			  });  
 
 				swipeWrapHeight();
 
 			}
-
-
-				$(window).resize(function(){
-					  swipeWrapHeight();
-				});
 	
-		
-
-
-
+			$(window).resize(function(){
+					swipeWrapHeight();
+			});
 			
 
 
 
 function swipeWrapHeight(){
-	var sHeight = $('.mainImg').height();
-	$('.swiper-container').css('height',sHeight);
+var sHeight = $('.mainImg').height();
+$('.swiper-container').css('height',sHeight);
+//$('.swiper-slide').css('height',sHeight);
+
 }
 
 
@@ -180,26 +178,8 @@ function swipeWrapHeight(){
 										<a href="#" title="more">more</a>
 									</p>
 									<!-- 새소식 한건만 출력 -->
-									<p class="secondP"><span>&middot;&nbsp;&nbsp;&nbsp;</span><a href="#" title="">Paul Bassett X HYUNDAI MOTORSTD...</a></p>
+									<p class="secondP"><span>&middot;</span><a href="#" title="">Paul Bassett X HYUNDAI MOTORSTD...</a></p>
 								</div>
-								<!-- 신규 매장 영역 -->
-								<div class="newShop">
-									<p class="firstP">
-										<span class="firstS">신규매장</span>
-									</p>
-									<div class="secondP">
-										<div class="firstDiv">
-											<a href="#" title=""><img src="../img/m/thumbEx1.png" alt="" /></a>	
-											<p><a href="">[138호점] 제주도점</a></p>
-										</div>
-										<div class="secondDiv">
-											<a href="#" title=""><img src="../img/m/thumbEx2.png" alt="" /></a>	
-											<p><a href="">[139호점] 마라도점</a></p>
-										</div>
-									</div>
-									<div class="blankDiv"></div>
-							 </div>
-							 <!-- // 신규 매장 영역 -->
 						 </div>
 						 <!-- //모바일 사이즈에서 활성화 되는 영역 -->
 			</div>
@@ -211,8 +191,7 @@ function swipeWrapHeight(){
 			<a href="#" class="faceBook"><img src="../img/pc/fbLogo.png" alt="facebook" /></a>
 			<ul class="foot_utils fl_clear">
 				<li class="provision"><a href="#">이용약관</a></li>
-				<li><a href="#">개인정보취급방침</a></li>
-				<li><a href="#" class="pcVer" style="color:#51321c;"><b>PC버전</b></a></li>
+				<li><a href="#">개인정보</a></li>
 				<li class="newstore"><a href="#">신규 입점 안내</a></li>
 				<li class="sitemap"><a href="#">사이트맵</a></li>
 			</ul>
